@@ -1,6 +1,5 @@
 import { dataRoute } from "../../constants";
 import * as React from "react";
-import map from "lodash-es/map";
 
 export interface IBlogState {
   data: string[] | number[];
@@ -33,7 +32,7 @@ class BlogData extends React.Component<IBlogState> {
     fetch(dataRoute, { method: "GET" })
       .then(res => res.json())
       .then(data => {
-        const normalizeData = map(data, (element: IElementType) => {
+        const normalizeData = data.map((element: IElementType) => {
           const { id, content, title } = element;
           return { id, content: content.rendered, title: title.rendered };
         });
@@ -49,7 +48,7 @@ class BlogData extends React.Component<IBlogState> {
             <th>Заголовок</th>
             <th>Текст</th>
           </tr>
-                {map(this.state.data, (element: INomalizeData) => {
+          {this.state.data.map((element: INomalizeData) => {
             return (
               <tr key={element.id}>
                 <td>{element.title}</td>
