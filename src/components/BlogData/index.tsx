@@ -1,4 +1,4 @@
-import { dataRoute } from "../../constants";
+import { blogRoute } from "../../constants";
 import * as React from "react";
 import ReactTable from "react-table";
 import { ReactTableDefaults } from "react-table";
@@ -83,10 +83,9 @@ class BlogData extends React.Component<IBlogState> {
   };
 
   public componentDidMount() {
-    fetch(dataRoute, { method: "GET" })
+    fetch(blogRoute, { method: "GET" })
       .then((res: Response) => res.json())
       .then((data: object[]) => {
-        console.dir(data);
         const normalizeData: object[] = data.map((element: IElementType) => {
           const { id, content, title, fimg_url } = element;
           const image = fimg_url;
