@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import BlogData from "./components/BlogData";
+import RootContainer from "./containers/RootContainer";
 
-ReactDOM.render(<BlogData data={[]} />, document.getElementById(
+ReactDOM.render(<RootContainer />, document.getElementById(
   "root"
 ) as HTMLElement);
