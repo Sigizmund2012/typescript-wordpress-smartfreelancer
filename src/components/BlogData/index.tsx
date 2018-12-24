@@ -21,7 +21,7 @@ interface IElementType {
   id: string;
   content: IContent;
   title: ITitle;
-  _embedded: object;
+  fimg_url: string;
 }
 
 interface ICeilProps {
@@ -86,9 +86,10 @@ class BlogData extends React.Component<IBlogState> {
     fetch(dataRoute, { method: "GET" })
       .then((res: Response) => res.json())
       .then((data: object[]) => {
+        console.dir(data);
         const normalizeData: object[] = data.map((element: IElementType) => {
-          const { id, content, title, _embedded } = element;
-          const image: string = _embedded["wp:featuredmedia"]["0"].source_url;
+          const { id, content, title, fimg_url } = element;
+          const image = fimg_url;
           return {
             id,
             content: content.rendered,
