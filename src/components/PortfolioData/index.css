@@ -1,0 +1,15 @@
+.portfolio-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.portfolio-image__image {
+  width: 100%;
+  height: auto;
+}
+
+.portfolio-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
