@@ -1,5 +1,6 @@
-import { aboutMePageRoute } from "../../constants";
 import * as React from "react";
+import { aboutMePageRoute } from "../../constants";
+import myAgeCounter from "../../utils/MyAgeCounter";
 import "./index.css";
 
 export interface IAboutMeState {
@@ -25,7 +26,9 @@ class AboutMe extends React.Component<IAboutMeState> {
     fetch(aboutMePageRoute, { method: "GET" })
       .then((res: Response) => res.json())
       .then((data: IPageData) => {
-        this.setState({ data: data.content.rendered });
+        this.setState({ data: data.content.rendered }, () => {
+          myAgeCounter();
+        });
       })
       .catch((error: Error) => {
         this.setState({ error: true, errorMessage: error.message });
