@@ -5,7 +5,7 @@ import { ReactTableDefaults } from "react-table";
 import "react-table/react-table.css";
 import "./index.css";
 
-export interface IBlogState {
+export interface IPortfolioState {
   data: object[];
   error?: boolean;
   errorMessage?: string;
@@ -77,8 +77,8 @@ Object.assign(ReactTableDefaults, {
   rowsSelectorText: "строк на странице"
 });
 
-class BlogData extends React.Component<IBlogState> {
-  public state: IBlogState = {
+class PortfolioData extends React.Component<IPortfolioState> {
+  public state: IPortfolioState = {
     data: []
   };
 
@@ -113,4 +113,4 @@ class BlogData extends React.Component<IBlogState> {
   }
 }
 
-export default BlogData;
+export default PortfolioData;
