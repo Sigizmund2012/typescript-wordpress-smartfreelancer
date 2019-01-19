@@ -77,7 +77,7 @@ Object.assign(ReactTableDefaults, {
   rowsSelectorText: "строк на странице"
 });
 
-class BlogData extends React.Component<IBlogState> {
+class BlogData extends React.PureComponent<IBlogState> {
   public state: IBlogState = {
     data: []
   };

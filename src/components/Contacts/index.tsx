@@ -16,7 +16,7 @@ interface IPageRendered {
   rendered: string;
 }
 
-class Contacts extends React.Component<IContactsState> {
+class Contacts extends React.PureComponent<IContactsState> {
   public state: IContactsState = {
     data: ""
   };

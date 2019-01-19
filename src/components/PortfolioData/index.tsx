@@ -77,7 +77,7 @@ Object.assign(ReactTableDefaults, {
   rowsSelectorText: "строк на странице"
 });
 
-class PortfolioData extends React.Component<IPortfolioState> {
+class PortfolioData extends React.PureComponent<IPortfolioState> {
   public state: IPortfolioState = {
     data: []
   };

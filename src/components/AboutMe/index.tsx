@@ -17,7 +17,7 @@ interface IPageRendered {
   rendered: string;
 }
 
-class AboutMe extends React.Component<IAboutMeState> {
+class AboutMe extends React.PureComponent<IAboutMeState> {
   public state: IAboutMeState = {
     data: ""
   };
