@@ -4,22 +4,23 @@ import PortfolioData from "../../components/PortfolioData";
 import BlogData from "../../components/BlogData";
 import AboutMe from "../../components/AboutMe";
 import Contacts from "../../components/Contacts";
+import "./index.css";
 
 const AppRouter = () => (
   <Router>
     <div>
-      <nav>
+      <nav className="top-navigation">
         <ul>
-          <li>
+          <li className="top-navigation__item">
             <Link to="/">Портфолио</Link>
           </li>
-          <li>
+          <li className="top-navigation__item">
             <Link to="/blog/">Блог</Link>
           </li>
-          <li>
+          <li className="top-navigation__item">
             <Link to="/about-me/">Обо мне</Link>
           </li>
-          <li>
+          <li className="top-navigation__item">
             <Link to="/contacts/">Контакты</Link>
           </li>
         </ul>

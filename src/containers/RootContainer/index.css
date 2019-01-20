@@ -1,0 +1,31 @@
+.top-navigation {
+  margin: 0;
+  padding: 20px;
+  background-color: #76c7c0;
+}
+
+.top-navigation ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.top-navigation__item {
+  list-style: none;
+  display: inline-block;
+  margin: 0 10px 0 0;
+  text-transform: uppercase;
+}
+
+.top-navigation__item a:focus,
+.top-navigation__item a:hover,
+.top-navigation__item a:visited {
+  outline: none;
+}
+
+.top-navigation__item a {
+  text-decoration: none;
+  color: #ffffff;
+  display: inline-block;
+}
